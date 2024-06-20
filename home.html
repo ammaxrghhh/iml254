@@ -1,0 +1,197 @@
+<!doctype html>
+<html>
+
+<style>
+
+    video {
+        width: 550px;
+        height: auto;
+        border: 2px solid #333;
+        animation: bounce 2s infinite alternate;
+        padding: 5px;
+    }
+
+    .ammar-section {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        background: #D3D3D3;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 150px;
+    }
+
+    .ammar-content {
+        max-width: 1000px;
+    }
+
+    .ammar-content h3 {
+        margin-bottom: 10px;
+    }
+
+    blockquote {
+        font-style: italic;
+        margin: 10px 0;
+    }
+
+    .ammar-details {
+        margin-top: 20px;
+        font-weight: bold;
+    }
+
+
+    .ammar-image img {
+        max-width: 50%;
+        height: auto;
+        border-radius: 10px;
+        margin-left: 20px;
+    }
+
+</style>
+
+<body>
+    <main>
+        <center>
+            <h1>HOME</h1>
+            <h3>
+                <p style="font-family:verdana"> This is my own personal website which contains everything about myself and mylife.</p>
+            </h3>
+            <h2>
+                <p style="font-family:verdana"> Hopefully you pleasure to watch this website :> </p>
+            </h2>
+            <video src="video\Hello and Welcome.mp4" alt="Hi Welcome" loop autoplay muted></video>
+        </center>
+    </main>
+
+    <center>
+        <section class="ammar-section last-content">
+            <div class="ammar-content">
+                <h3>My Inspiration Quotes</h3>
+                <blockquote style="font-family:Stoic Script">
+                    "Happiness and Success comes from Powers, Powers comes from Hardworks and Sacrifices."
+                </blockquote>
+                <p>This quotes tell us to always strive in our life no matter how hard and how bad the implications it is. To obtain something you never had, you have to do something you never through.</p>
+                <p>Hence, we need to always surpass our limits by always trying and learn new things and getting out of the comfort zone in order to gain many valuable experiences that can be used in our lives.</p>
+                <p>Peoples who tried and failed many times, are better than peoples who not even give a try. </p>
+                <p class="ammar-details">Muhammad Ammar Bin Khamisan, Informatics Library Student (KCDIM1444B), Universiti Teknologi MARA, Merbok Branch Sungai Petani, Kedah </p>
+            </div>
+            <div class="ammar-image">
+                <img src="image\ammar hensem.jpg" alt="ammar hensem">
+            </div>
+        </section>
+    </center>
+
+<footer>
+    <style>
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            margin-top: 100px;
+            text-align: left;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 0 15px; 
+        }
+        .footer-section {
+            margin: 20px;
+            flex: 1;
+            min-width: 200px;
+        }
+        .footer-section h3 {
+            border-bottom: 1px solid white;
+            font-size: 15px;
+            padding-bottom: 10px;
+        }
+        .footer-section ul {
+            list-style-type: decimal;
+            padding: 0;
+        }
+        .footer-section ul li {
+            margin: 10px 0;
+        }
+        .footer-section ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .footer-section ul li a:hover {
+            color: yellow;
+            text-decoration: underline;
+        }
+        .footer-contact p,
+        .footer-contact a {
+            color: white;
+        }
+        .footer-contact a {
+            text-decoration: none;
+        }
+        .footer-contact a:hover {
+            color: yellow;
+            text-decoration: underline;
+        }
+        .footer-copyright {
+            margin-top: 20px;
+            text-align: center;
+            width: 100%;
+            border-top: 1px solid #555;
+            padding-top: 10px;
+            font-size: 14px;
+        }
+    </style>
+
+    <div class="footer-content">
+        <div class="footer-section footer-about">
+            <h3>THIS WEBSITES</h3>
+            <p>This website purposely created in order to complete my individual assignment task IML254 (Introduction to Web Content Development) that needs to be submitted in week 12. Also using black and white color combination as minimalist style.</p>
+            <p>After completing this task, there is a lot of knowledge that I've gained related to creating websites using html and css that can also add value to me for use in the future.</p>
+            <p>I hope all the efforts I put into creating this website will get high and brilliant marks so I will succeed in getting excellent pointers.</p>
+        </div>
+        <div class="footer-section footer-contact">
+            <h3>MY CONTACT INFO</h3>
+            <p>Currently staying at Kolej Malinja A</p>
+            <h4><p>My Phone Number (copy to clipboard)</p></h4>
+            <p><a id="phone1" onclick="copyToClipboard('phone1')">+6014 - 930 7134</a></p>
+            <h4><p>My E-mail (copy to clipboard)</p></h4>
+            <p><a id="email" onclick="copyToClipboard('email')">khamisanammar@gmail.com</a></p>
+        </div>
+
+        <div class="footer-section footer-branches">
+            <h3>REFERENCES</h3>
+            <ul>
+                <li><a href="https://www.w3schools.com/html/" target="_blank">W3Schoools HTML and CSS</a></li>
+                <li><a href="https://www.hostinger.my/tutorials/website-color-schemes" target="_blank">Best color combinations for websites</a></li>
+                <li><a href="https://youtu.be/dvdamxFWiMM" target="_blank">How To Add Icon in Button HTML and CSS</a></li>
+                <li><a href="https://youtu.be/gU84kUNLABE" target="_blank">Top 5 Cool and Functional Fonts for Developers</a></li>
+                <li><a href="https://youtu.be/4U_AAGHzTok" target="_blank">Adding google maps in HTML</a></li>
+                <li><a href="https://youtu.be/vrt9o-O_JOo?list=PL07efmqYWHZ_Q85cRi9Q39mABRqfe16K8" target="_blank">CSS Button Hover Effects Animation</a></li>
+                <li><a href="https://youtu.be/QI272Yrk33Q" target="_blank">How to Create a Logo in Adobe Illustrator</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        &copy; 2024 Muhammad Ammar Bin Khamisan. All rights reserved.
+    </div>
+</footer>
+
+<script>
+    function copyToClipboard(elementId) {
+        var textToCopy = document.getElementById(elementId).innerText;
+        var tempInput = document.createElement('input');
+        tempInput.value = textToCopy;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempInput);
+        alert('Copied to clipboard: ' + textToCopy);
+    }
+</script>
+</body>
+</html>

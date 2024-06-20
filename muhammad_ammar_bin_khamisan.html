@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This Website created as to complete my individual assignment IML254 as a Library Informatics student (CDIM144).">
+    <meta name="keywords" content="myself, personal details, photos, videos, personal informations, profiles ">
+    <meta name="author" content="Muhammad Ammar Bin Khamisan">
+    <title>My Personal Website</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+        }
+        header img {
+            height: 40px;
+            margin: 0 40px;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            position: fixed;
+            top: 60px;
+            width: 100%;
+            z-index: 1;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav li {
+            position: relative;
+        }
+        nav a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 20px 20px;
+            cursor: pointer;
+        }
+        nav li:hover > a {
+            background-color: #555;
+        }
+        nav ul ul {
+            display: none;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            background-color: #444;
+            flex-direction: column;
+            width: 200px;
+            z-index: 2;
+        }
+        nav ul li:hover > ul {
+            display: flex;
+        }
+        nav ul ul a {
+            padding: 10px 20px;
+        }
+        nav ul ul li a img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        nav ul ul li:hover a img {
+            width: 20px; 
+            height: 20px; 
+        }
+        .content {
+            position: absolute;
+            top: 120px;
+            bottom: 0;
+            width: 100%;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="image\ammar logo.png" alt="Logo">
+        <h1>My Personal Website</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="home.html" target="contentFrame">Home</a></li>
+            <li>
+                <a class="non-clickable">About Me</a>
+                <ul>
+                    <li><a href="myself.html" target="contentFrame">Myself</a></li>
+                    <li><a href="myfamily.html" target="contentFrame">My Family</a></li>
+                    <li><a href="myfriends.html" target="contentFrame">My Friends</a></li>
+                </ul>
+            </li>
+            <li><a href="education.html" target="contentFrame">Education</a></li>
+            <li>
+                <a class="non-clickable">Contact Me</a>
+                <ul>
+                    <li><a href="https://wa.me/qr/5JLNGTLF2NZED1" target="_blank"><img src="image\whatsapp.jpg" alt="Whatsapp"> Whatsapp</a></li>
+                    <li><a href="https://www.instagram.com/mxrkhn?igsh=OHc0MnJzODkyZzht" class="ammar-button instagram" target="_blank"><img src="image\instagram.jpg" alt="Instagram"> Instagram</a></li>
+                    <li><a href="https://www.tiktok.com/@turuttuturuuu?_t=8mqy6uJnmGv&_r=1" class="ammar-button tiktok" target="_blank"><img src="image\tiktok.jpg" alt="Tiktok"> Tiktok</a></li>
+                    <li><a href="https://www.facebook.com/muhdammarkhamisan" target="_blank"><img src="image\facebook.jpg" alt="Facebook"> Facebook</a></li>
+                    <li><a href="https://t.me/ammxrghhh" target="_blank"><img src="image\telegram.jpg" alt="Telegram"> Telegram</a></li>
+                </ul>
+            </li>
+            <li><a href="gallery.html" target="contentFrame">Gallery</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <iframe src="home.html" name="contentFrame" style="width:100%; height:99%; border:none;"></iframe>
+    </div>
+</body>
+</html>

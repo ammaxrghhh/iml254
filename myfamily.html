@@ -1,0 +1,265 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This page is about my lovely family!">
+    <meta name="keywords" content="family, pictures, videos, life, happy">
+    <meta name="author" content="Muhammad Ammar Bin Khamisan">
+    <title>myfamily - My Personal Website</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px; 
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        .content {
+            text-align: center;
+        }
+        .slider {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: 50px auto;
+            overflow: hidden;
+            background: #000;
+        }
+        .slides {
+            display: flex;
+            transition: transform 1s ease;
+        }
+        .slides img {
+            min-width: 100%;
+            height: 400px;
+            object-fit: contain;
+            transition: opacity 1s ease;
+        }
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .nav-button {
+            background-color: rgba(0,0,0,0.5);
+            border: none;
+            color: white;
+            font-size: 18px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .iframe-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 100px;
+            margin-top: 50px;
+        }
+        .iframe-wrapper {
+            width: 35%;
+            position: relative;
+        }
+        .iframe-wrapper iframe {
+            width: 100%;
+            height: 300px;
+            border: 20px solid #333;
+        }
+        .iframe-wrapper .iframe-title {
+            position: absolute;
+            bottom: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: lightgrey;
+            padding: 5px 10px;
+            border: 5px solid #ccc;
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>My Family</h1>
+            <p>I am the fourth child in 6 siblings. I have a strong father, a loving mother, 2 caring sisters, a funny brother and 2 younger brothers who listen. I really really love my family.</p>
+            <h3>This is the pictures of my lovely family</h3>
+
+            <div class="slider">
+                <div class="slides">
+                    <img src="image\family1.jpg" alt="Family Picture 1" class="active">
+                    <img src="image\family2.jpg" alt="Family Picture 2">
+                    <img src="image\family3.jpg" alt="Family Picture 3">
+                    <img src="image\family4.jpg" alt="Family Picture 4">
+                    <img src="image\family5.jpg" alt="Family Picture 5">
+                </div>
+                <div class="navigation">
+                    <button class="nav-button" onclick="prevSlide()">&#10094;</button>
+                    <button class="nav-button" onclick="nextSlide()">&#10095;</button>
+                </div>
+            </div>
+        </div>
+    </div>    
+           <div class="iframe-container">
+                <div class="iframe-wrapper">
+                    <iframe width="1040" height="585" src="https://www.youtube.com/embed/ldkO5sAQbhM" title="Maher Zain Full Album | Rahmatun Lil&#39;Alameen, Ramadan | Maher Zain Kumpulan Lagu Terbaik 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="iframe-title">Our Favorite Playlist Song</div>
+                </div>
+                <div class="iframe-wrapper">
+                    <iframe width="1040" height="585" src="https://www.youtube.com/embed/hA6hldpSTF8" title="Marvel Studios&#39; Avengers - Official Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="iframe-title">Our Favorite Movie</div>
+                </div>
+                <div class="iframe-wrapper">
+                    <iframe width="1040" height="585" src="https://www.youtube.com/embed/e1C-dnys9As" title="Full Tour at Legoland Malaysia and Sea Life Aquarium | The Largest Legoland in Asia! | Walking Tour" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="iframe-title">Our Favorite Holiday Place</div>
+                </div>
+                <div class="iframe-wrapper">
+                    <iframe width="1040" height="585" src="https://www.youtube.com/embed/UUNhbVG6JLA" title="LEE Zii Jia (MAS) vs Chia Hao LEE (TPE) | Australian Open 2024 Badminton" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="iframe-title">Our Favorite Sports</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <script>
+        let currentIndex = 0;
+        const slides = document.querySelector('.slides');
+        const totalSlides = document.querySelectorAll('.slides img').length;
+
+        function showSlide(index) {
+            const offset = -index * 100;
+            slides.style.transform = 'translateX(' + offset + '%)';
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            showSlide(currentIndex);
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            showSlide(currentIndex);
+        }
+    </script>
+
+<footer>
+    <style>
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            margin-top: 100px;
+            text-align: left;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 0 15px; 
+        }
+        .footer-section {
+            margin: 20px;
+            flex: 1;
+            min-width: 200px;
+        }
+        .footer-section h3 {
+            border-bottom: 1px solid white;
+            font-size: 15px;
+            padding-bottom: 10px;
+        }
+        .footer-section ul {
+            list-style-type: decimal;
+            padding: 0;
+        }
+        .footer-section ul li {
+            margin: 10px 0;
+        }
+        .footer-section ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .footer-section ul li a:hover {
+            color: yellow;
+            text-decoration: underline;
+        }
+        .footer-contact p,
+        .footer-contact a {
+            color: white;
+        }
+        .footer-contact a {
+            text-decoration: none;
+        }
+        .footer-contact a:hover {
+            color: yellow;
+            text-decoration: underline;
+        }
+        .footer-copyright {
+            margin-top: 20px;
+            text-align: center;
+            width: 100%;
+            border-top: 1px solid #555;
+            padding-top: 10px;
+            font-size: 14px;
+        }
+    </style>
+
+
+    <div class="footer-content">
+        <div class="footer-section footer-about">
+            <h3>THIS WEBSITES</h3>
+            <p>This website purposely created in order to complete my individual assignment task IML254 (Introduction to Web Content Development) that needs to be submitted in week 12. Also using black and white color combination as minimalist style.</p>
+            <p>After completing this task, there is a lot of knowledge that I've gained related to creating websites using html and css that can also add value to me for use in the future.</p>
+            <p>I hope all the efforts I put into creating this website will get high and brilliant marks so I will succeed in getting excellent pointers.</p>
+        </div>
+        <div class="footer-section footer-contact">
+            <h3>MY CONTACT INFO</h3>
+            <p>Currently staying at Kolej Malinja A</p>
+            <h4><p>My Phone Number (copy to clipboard)</p></h4>
+            <p><a id="phone1" onclick="copyToClipboard('phone1')">+6014 - 930 7134</a></p>
+            <h4><p>My E-mail (copy to clipboard)</p></h4>
+            <p><a id="email" onclick="copyToClipboard('email')">khamisanammar@gmail.com</a></p>
+        </div>
+
+        <div class="footer-section footer-branches">
+            <h3>REFERENCES</h3>
+            <ul>
+                <li><a href="https://www.w3schools.com/html/" target="_blank">W3Schoools HTML and CSS</a></li>
+                <li><a href="https://www.hostinger.my/tutorials/website-color-schemes" target="_blank">Best color combinations for websites</a></li>
+                <li><a href="https://youtu.be/dvdamxFWiMM" target="_blank">How To Add Icon in Button HTML and CSS</a></li>
+                <li><a href="https://youtu.be/gU84kUNLABE" target="_blank">Top 5 Cool and Functional Fonts for Developers</a></li>
+                <li><a href="https://youtu.be/4U_AAGHzTok" target="_blank">Adding google maps in HTML</a></li>
+                <li><a href="https://youtu.be/vrt9o-O_JOo?list=PL07efmqYWHZ_Q85cRi9Q39mABRqfe16K8" target="_blank">CSS Button Hover Effects Animation</a></li>
+                <li><a href="https://youtu.be/QI272Yrk33Q" target="_blank">How to Create a Logo in Adobe Illustrator</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        &copy; 2024 Muhammad Ammar Bin Khamisan. All rights reserved.
+    </div>
+</footer>
+
+<script>
+    function copyToClipboard(elementId) {
+        var textToCopy = document.getElementById(elementId).innerText;
+        var tempInput = document.createElement('input');
+        tempInput.value = textToCopy;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempInput);
+        alert('Copied to clipboard: ' + textToCopy);
+    }
+</script>
+</body>
+</html>
